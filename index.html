@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#c9e6fb">
+  <meta name="description" content="하루의 리듬을 위한 맞춤 영양 루틴, HARU">
+  <title>HARU — 당신의 하루, 시간마다 필요한 한 알</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700;800&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+  <script src="nav.js" defer></script>
+</head>
+<body>
+  <div class="announcement">
+    <span><strong>첫 구매 쿠폰</strong><span>HARU 첫 구매 고객에게 10% 할인 쿠폰을 드려요 · 가입 즉시 발급</span></span>
+    <a href="#products">쿠폰 받기 <span aria-hidden="true">↗</span></a>
+    <button class="announcement-close" type="button" aria-label="공지 닫기">×</button>
+  </div>
+
+  <header class="site-header shell">
+    <a class="wordmark" href="#top" aria-label="HARU 홈">HARU</a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="메뉴 열기"><i></i><i></i></button>
+    <nav id="main-nav" class="main-nav" aria-label="주 메뉴">
+      <a href="#products">제품</a><a href="#recommend">맞춤 추천</a><a href="#routine">정기구독</a><a href="#consult">상담</a><a class="nav-mobile-only" href="login.html">로그인</a><a class="nav-mobile-only" href="signup.html">회원가입</a>
+    </nav>
+    <div class="header-actions"><a href="login.html">로그인</a><a href="signup.html">회원가입</a><a class="outline-button" href="#products">구매하기 <span>↗</span></a></div>
+  </header>
+
+  <main id="top" class="shell">
+    <section class="hero-grid" aria-label="HARU 하루 영양 루틴">
+      <a class="hero-card" href="#products">
+        <video class="hero-video" autoplay muted loop playsinline poster="images/video/haru_hero_poster.jpg" aria-label="하루를 보내는 직장인과 HARU 제품">
+          <source src="images/video/haru_hero.mp4?v=2" type="video/mp4">
+        </video>
+        <div class="hero-shade"></div>
+        <span class="eyebrow hero-label">오늘의 루틴 <span>↗</span></span>
+        <div class="hero-time" data-scene-clock><strong data-scene-time>06:30</strong><span data-scene-label>MORNING</span></div>
+        <div class="hero-copy"><span class="eyebrow">HARU DAILY ROUTINE</span><h1>당신의 바쁜 하루<br>HARU가 함께하겠습니다</h1><p data-scene-care>[아침 활력 케어] Morning charge</p></div>
+        <span class="hero-pagination" aria-hidden="true"><i></i><i></i><i></i></span>
+      </a>
+
+      <div class="hero-side">
+        <div class="product-tile morning"><div><span class="eyebrow">MORNING 07:00</span><h2>Morning charge</h2><p>하루 멀티비타민</p><p class="tile-price"><span>정가</span> <b>30,000</b>원</p><a class="coupon-btn" href="#products">할인쿠폰 적용하기</a></div><img src="images/product/Product%20image/bottle_morning.png" alt="HARU Morning charge"></div>
+        <div class="product-tile day"><div><span class="eyebrow">DAY 15:00</span><h2>Day focus</h2><p>루테인 · 지아잔틴</p><p class="tile-price"><span>정가</span> <b>25,000</b>원</p><a class="coupon-btn" href="#products">할인쿠폰 적용하기</a></div><span class="new-badge">NOW</span><img src="images/product/Product%20image/bottle_day.png" alt="HARU Day focus"></div>
+        <div class="product-tile night"><div><span class="eyebrow">NIGHT 23:00</span><h2>Night rest</h2><p>글리신 · 테아닌</p><p class="tile-price"><span>정가</span> <b>20,000</b>원</p><a class="coupon-btn" href="#products">할인쿠폰 적용하기</a></div><img src="images/product/Product%20image/bottle_night.png" alt="HARU Night rest"></div>
+        <a class="recommend-tile" href="#recommend"><div><span class="eyebrow">맞춤 추천</span><h2>나에게 맞는<br><span class="rec-strong">영양제 찾기</span></h2><span class="pill-link">시작하기 <b>↗</b></span></div><img src="images/product/Product%20image/box%20set.png" alt="HARU 세 가지 시간대별 제품 박스"></a>
+        <div class="clock-card" id="routine"><div class="clock-top"><span class="eyebrow">지금 이 시간</span><span class="now-badge">NOW</span></div><div class="clock-bottom"><time class="digital-clock" aria-label="현재 시각" data-clock><span class="flip-group"><span class="flip" data-flip>1</span><span class="flip" data-flip>5</span></span><b>:</b><span class="flip-group"><span class="flip" data-flip>0</span><span class="flip" data-flip>3</span></span><b>:</b><span class="flip-group seconds"><span class="flip" data-flip>0</span><span class="flip" data-flip>0</span></span></time><div class="date-block"><strong data-date>2026.10.28</strong><span data-weekday>WEDNESDAY</span></div></div><p>실제 시간과 오늘의 루틴을 확인합니다</p></div>
+      </div>
+    </section>
+
+    <section class="quick-grid" id="products" aria-label="제품과 고객 후기">
+      <a class="deal-card" href="#recommend"><span class="deal-tag">이달의 할인</span><h2>HARU 유산균</h2><p>가벼운 하루의 시작</p><div class="price"><del>54,000원</del><strong>30%</strong><b>49,980<small>원</small></b></div><div class="deal-visual"><img src="images/product/Product%20image/gut-balance-cutout.png" alt="HARU 유산균 레몬·오렌지·사과 3가지 맛"><ul class="deal-flavors"><li class="lemon">레몬</li><li class="orange">오렌지</li><li class="apple">사과</li></ul></div></a>
+      <div class="review-card"><div class="review-heading"><h2>고객 후기 <span>★ 4.8</span></h2><a href="#footer">더보기 +</a></div><ul class="review-list"><li><span class="review-kind">Night</span><span class="stars">★★★★★</span><p>자기 전에 챙겨 먹으니 아침이 훨씬 가벼워요</p><small>이○은&nbsp; 10.27</small></li><li><span class="review-kind green">Day</span><span class="stars">★★★★★</span><p>모니터 보는 시간이 길어서 꾸준히 먹고 있어요</p><small>박○나&nbsp; 10.25</small></li><li><span class="review-kind orange">Morning</span><span class="stars">★★★★★</span><p>알약 크기가 작아서 출근길에도 부담 없어요</p><small>김○아&nbsp; 10.22</small></li><li><span class="review-kind peach">유산균</span><span class="stars">★★★★★</span><p>리뉴얼 상품에서 아쉬운 점을 찾기 힘드네요</p><small>김○정&nbsp; 10.20</small></li></ul></div>
+      <a class="consult-card" id="consult" href="mailto:help@haru.example"><img src="images/product/%EC%83%81%EB%8B%B4/%EB%AC%B8%EC%9D%98.png" alt=""><span class="consult-chip sr-only">상담 / 문의</span><div class="consult-copy sr-only"><strong>상담 시 주의할 점을 알려드려요</strong><span>◉ 1:1 영양 상담</span><span>🟡 카카오톡 채널</span></div></a>
+    </section>
+
+    <section class="journal-section" id="recommend">
+      <div class="section-heading"><span class="eyebrow">HARU NOTE</span><h2>영양의 보고</h2><p>나에게 필요한 오늘의 영양 이야기</p></div>
+      <div class="filter-tabs" role="group" aria-label="콘텐츠 분류"><button class="active" type="button" aria-pressed="true">알고계신가요</button><button type="button" aria-pressed="false">하루 루틴 에세이</button><button type="button" aria-pressed="false">식품에서 찾은 영양</button></div>
+      <div class="article-grid">
+        <a class="article-card article-lutein" href="#footer"><div class="article-visual"><img src="images/product/Card/Image-2.png" alt="" loading="lazy"></div><div class="article-body sr-only"><span class="eyebrow">루테인과 눈 건강의 관계</span><h3>하루 종일 화면 앞이라면<br><em>루테인</em>부터 알아두세요</h3></div><p><strong>View.</strong> [0,000]명이 읽었어요</p><div class="article-desc">[루테인] 화면 보는 시간이 긴 사람을 위한 루테인 기초 가이드</div></a>
+        <a class="article-card article-joint" href="#footer"><div class="article-visual"><img src="images/product/Card/Image.png" alt="" loading="lazy"></div><div class="article-body sr-only"><span class="eyebrow">초록입홍합 속 영양 이야기</span><h3>뻐근한 무릎이 신경 쓰인다면<br><em>초록입홍합</em>의 모든 것</h3></div><p><strong>View.</strong> [0,000]명이 읽었어요</p><div class="article-desc">[초록입홍합] 뉴질랜드 바다에서 온 관절 성분, 한눈에 정리</div></a>
+        <a class="article-card article-focus" href="#footer"><div class="article-visual"><img src="images/product/Card/Image-1.png" alt="" loading="lazy"></div><div class="article-body sr-only"><span class="eyebrow">편안한 밤을 만드는 습관</span><h3>자꾸 깜빡하는 요즘이라면<br><em>포스파티딜세린</em>을 주목하세요</h3></div><p><strong>View.</strong> [0,000]명이 읽었어요</p><div class="article-desc">[포스파티딜세린] 깜빡임이 잦았을 때 알아두면 좋은 두뇌 성분</div></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer shell" id="footer"><div class="footer-top"><a class="wordmark" href="#top">HARU</a><nav aria-label="회사 정보"><a href="#footer">회사소개</a><a href="#footer">이용약관</a><a href="#footer"><strong>개인정보처리방침</strong></a><a href="#consult">고객센터</a><a href="#products">제휴 문의</a></nav></div><div class="footer-content"><div><p>(주)하루웰니스&nbsp; |&nbsp; 대표 김하루&nbsp; |&nbsp; 사업자등록번호 000-00-00000</p><p>통신판매업신고 제2025-서울강남-0000호&nbsp; |&nbsp; 개인정보관리 책임자 고객지원팀</p><p>주소 서울특별시 강남구 하루로 123, 하루빌딩 7층 (06000)</p><p>이메일 <a href="mailto:help@haru.example">help@haru.example</a></p></div><div class="footer-contact"><span>고객센터</span><strong>1588-0000</strong><p>평일 09:00 - 18:00 · 점심 12:00 - 13:00</p><div class="socials" aria-label="소셜 미디어"><a href="#footer" aria-label="글로벌 사이트"><img src="images/product/Image/imgi_1_lnb_sns_tw1%201.png" alt=""></a><a href="#footer" aria-label="네이버 밴드"><img src="images/product/Image/imgi_4_lnb_sns_tw3%201.png" alt=""></a><a href="#footer" aria-label="유튜브"><img src="images/product/Image/imgi_3_lnb_sns_tw%201.png" alt=""></a><a href="#footer" aria-label="카카오톡 채널"><img src="images/product/Image/imgi_2_lnb_sns_tw2%201.png" alt=""></a></div></div></div><div class="footer-bottom"><span>© 2026 HARU Wellness. All rights reserved.</span><span>본 사이트는 프로토타입으로 가상 브랜드이며, 실제 판매와 무관합니다.</span></div></footer>
+</body>
+</html>

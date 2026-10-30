@@ -1,0 +1,7 @@
+# 배포에 필요 없는 원본·백업
+*.zip
+images/video/haru_hero_original_backup.mp4
+스크린샷*.png
+.vscode/
+Thumbs.db
+.DS_Store

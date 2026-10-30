@@ -1,0 +1,355 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap');
+
+:root{--ink:#1e2340;--muted:#758095;--orange:#d9541a;--green:#1f7a57;--night:#2b39a9;--sky:#c8e5fa;--line:rgba(30,35,64,.1);--paper:#fff;--font:'Noto Sans KR','Pretendard',sans-serif;--font-en:'Outfit','Noto Sans KR',sans-serif}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);font-family:var(--font);background:linear-gradient(180deg,#b6dcf8 0,#d8ecfc 43%,#f7faff 100%);font-size:14px}a{color:inherit;text-decoration:none}button{font:inherit;color:inherit}.shell{width:min(1360px,calc(100% - 64px));margin-inline:auto}.announcement{height:42px;width:min(1360px,calc(100% - 64px));margin:18px auto 0;border-radius:12px;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;gap:15px;padding:0 20px;font-size:10px;position:relative}.announcement>span{display:flex;gap:15px;align-items:center}.announcement strong{font-size:11px}.announcement>span>span{color:#d7d9e3}.announcement>a{border:1px solid rgba(255,255,255,.55);border-radius:20px;padding:5px 11px;font-size:9px}.announcement-close{position:absolute;right:13px;border:0;background:none;color:#b9bed0;font-size:17px;cursor:pointer}.site-header{height:82px;display:flex;align-items:center;justify-content:space-between}.wordmark{font-size:25px;font-weight:800;letter-spacing:.04em}.wordmark span{font-size:8px;vertical-align:top;margin-left:2px}.main-nav,.header-actions{display:flex;align-items:center;gap:36px;font-size:12px}.main-nav a,.header-actions>a:not(.outline-button){color:#4b546b;transition:color .2s}.main-nav a:hover,.header-actions>a:hover{color:var(--orange)}.header-actions{gap:20px}.outline-button{border:1px solid var(--ink);border-radius:99px;padding:10px 18px;font-size:11px}.outline-button span{margin-left:7px}.menu-toggle{display:none}.hero-grid{display:grid;grid-template-columns:1.04fr 1fr;gap:16px}.hero-card{height:610px;min-height:500px;position:relative;overflow:hidden;border-radius:24px;color:#fff;background:#9c978a}.hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.hero-shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,25,35,.18),transparent 30%,rgba(0,0,0,.03) 48%,rgba(0,0,0,.76) 100%)}.hero-label{position:absolute;left:28px;top:24px;padding:8px 13px;border:1px solid rgba(255,255,255,.55);border-radius:30px;font-size:10px}.hero-label span{margin-left:8px}.hero-time{position:absolute;right:28px;top:24px;display:grid;justify-items:end}.hero-time strong{font-size:52px;line-height:1;font-weight:800;letter-spacing:-.06em}.hero-time span{font-size:10px;letter-spacing:.18em;margin-top:8px}.hero-copy{position:absolute;left:28px;bottom:30px}.eyebrow{display:block;font-size:9px;font-weight:600;letter-spacing:.04em}.hero-copy .eyebrow{margin-bottom:10px;opacity:.8}.hero-copy h1{font-size:clamp(28px,3vw,42px);line-height:1.28;letter-spacing:-.055em;margin:0 0 11px;font-weight:800}.hero-copy p{font-size:11px;margin:0;opacity:.8}.hero-pagination{position:absolute;right:26px;bottom:30px;display:flex;gap:6px}.hero-pagination i{width:7px;height:7px;border-radius:99px;background:rgba(255,255,255,.55)}.hero-pagination i:first-child{width:24px;background:#fff}.hero-side{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr 1.23fr;gap:16px;min-height:610px}.product-tile{position:relative;border-radius:22px;overflow:hidden;padding:22px 20px;display:flex;flex-direction:column;justify-content:space-between;isolation:isolate;transition:transform .2s}.product-tile:hover,.recommend-tile:hover,.deal-card:hover{transform:translateY(-3px)}.product-tile>div{z-index:1}.product-tile .eyebrow{margin-bottom:auto;font-size:9px}.product-tile h2{font-size:17px;margin:0 0 4px;letter-spacing:-.04em}.product-tile p{font-size:10px;color:#69748a;margin:0}.product-tile img{position:absolute;width:37%;height:90%;right:5%;bottom:-1%;object-fit:contain;mix-blend-mode:multiply}.morning{background:#e8f4fc;color:#526682}.morning .eyebrow{color:var(--orange)}.day{background:#e6f4ee;border:1.5px solid var(--green);color:var(--ink)}.day .eyebrow{color:var(--green)}.day img{width:35%;height:96%}.night{background:#e8eafa;color:#56688f}.night .eyebrow{color:var(--night)}.new-badge,.now-badge{position:absolute;right:17px;top:14px;color:#fff;background:var(--green);border-radius:20px;padding:4px 9px;font-size:8px;font-weight:700;z-index:2}.recommend-tile{position:relative;overflow:hidden;border-radius:22px;background:#171e39;color:#fff;padding:22px 20px;transition:transform .2s}.recommend-tile>div{position:relative;z-index:1}.recommend-tile h2{font-size:21px;line-height:1.35;letter-spacing:-.05em;margin:28px 0 12px}.recommend-tile .eyebrow{opacity:.7}.recommend-tile img{position:absolute;right:-25%;height:120%;width:105%;top:-6%;object-fit:cover;object-position:center;opacity:.68;mask-image:linear-gradient(90deg,transparent 0%,#000 30%)}.pill-link{background:#fff;color:var(--ink);border-radius:30px;padding:9px 14px;font-size:10px;display:inline-flex;gap:10px}.clock-card{background:#fff;border-radius:22px;grid-column:1/-1;padding:20px 24px;display:flex;flex-direction:column;justify-content:space-between}.clock-top{display:flex;justify-content:space-between;align-items:center}.clock-top .eyebrow{color:#657084}.now-badge{position:static;background:var(--ink)}.clock-bottom{display:flex;align-items:center;gap:22px}.digital-clock{display:flex;align-items:center;gap:7px;font-size:clamp(35px,4.2vw,58px);font-weight:800;letter-spacing:-.04em;line-height:1}.digital-clock b{font-size:.8em}.date-block{display:grid;gap:5px}.date-block strong{font-size:14px}.date-block span{font-size:9px;letter-spacing:.14em;color:#818ba0}.clock-card>p{font-size:10px;color:#9aa3b1;margin:0}.quick-grid{margin-top:16px;display:grid;grid-template-columns:1fr 2.08fr 1fr;gap:16px}.deal-card,.review-card,.consult-card{height:220px;border-radius:22px;overflow:hidden;position:relative}.deal-card{background:linear-gradient(130deg,#fff 15%,#f1f0eb);padding:20px 20px;transition:transform .2s}.deal-tag{display:inline-block;background:var(--orange);color:white;border-radius:20px;padding:4px 8px;font-size:9px;font-weight:700}.deal-card h2{font-size:17px;margin:10px 0 3px}.deal-card>p{font-size:10px;color:#687286;margin:0}.deal-points{display:flex;gap:7px;margin-top:12px;font-size:9px}.deal-points span:before{content:'●';color:var(--green);font-size:8px;margin-right:4px}.price{position:absolute;left:20px;bottom:23px;display:grid;grid-template-columns:auto auto;align-items:center;column-gap:5px}.price del{grid-column:1/-1;font-size:9px;color:#969eab}.price strong{color:var(--orange);font-size:19px}.price b{font-size:15px}.price small{font-size:10px}.deal-card>img{position:absolute;width:45%;height:80%;right:-3%;bottom:-1%;object-fit:cover;object-position:30% center;mix-blend-mode:multiply;mask-image:linear-gradient(90deg,transparent,#000 40%)}.review-card{background:#fff;padding:17px 22px}.review-heading{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);padding-bottom:10px}.review-heading h2{font-size:13px;margin:0}.review-heading h2 span{color:var(--orange);font-size:10px;margin-left:6px}.review-heading>a{font-size:9px;color:#798295}.review-list{list-style:none;padding:0;margin:6px 0}.review-list li{display:grid;grid-template-columns:64px 54px 1fr auto;align-items:center;gap:9px;padding:7px 0;border-bottom:1px solid rgba(30,35,64,.06);font-size:10px}.review-list li:last-child{border:0}.review-kind{background:#e9ebfb;color:var(--night);padding:4px 7px;border-radius:20px;text-align:center;font-size:9px}.review-kind.green{background:#e4f2eb;color:var(--green)}.review-kind.orange{background:#fff0e8;color:var(--orange)}.review-kind.peach{background:#ffeadf;color:#c55a34}.stars{color:#f39426;letter-spacing:1px;font-size:9px}.review-list p{margin:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.review-list small{font-size:9px;color:#788194;white-space:nowrap}.consult-card{color:white}.consult-card>img{width:100%;height:100%;object-fit:cover;filter:saturate(.75)}.consult-card:after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,rgba(19,27,51,.88),transparent 75%)}.consult-chip{position:absolute;top:16px;left:16px;z-index:1;border-radius:20px;background:rgba(29,35,64,.76);padding:6px 10px;font-size:9px}.consult-copy{position:absolute;z-index:1;left:17px;right:10px;bottom:16px;display:grid;gap:6px;font-size:10px}.consult-copy strong{width:max-content;max-width:100%;background:var(--orange);border-radius:4px;padding:5px 8px;margin-bottom:3px;font-size:10px}.journal-section{padding:68px 0 82px}.section-heading{text-align:center}.section-heading .eyebrow{font-size:10px;letter-spacing:.3em;color:#59657d}.section-heading h2{font-size:28px;letter-spacing:-.06em;margin:7px 0 5px}.section-heading p{font-size:11px;color:#788295;margin:0}.filter-tabs{display:flex;justify-content:center;gap:8px;margin:22px 0 28px}.filter-tabs button{border:0;border-radius:30px;background:rgba(255,255,255,.8);padding:10px 17px;font-size:10px;cursor:pointer;transition:all .2s}.filter-tabs button:hover,.filter-tabs button.active{background:var(--ink);color:#fff}.article-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.article-card{min-width:0}.article-visual{height:260px;position:relative;overflow:hidden;border-radius:20px;color:#fff;background:#dfebec}.article-visual:after{content:'';position:absolute;inset:35% 0 0;background:linear-gradient(0deg,rgba(9,15,20,.82),transparent)}.article-visual img{width:100%;height:100%;object-fit:cover;transition:transform .5s}.article-card:hover .article-visual img{transform:scale(1.04)}.article-lutein .article-visual img{object-position:13% center}.article-joint .article-visual img{object-position:52% center}.article-focus .article-visual img{object-fit:contain;object-position:center 45%;background:linear-gradient(135deg,#f3f5f7,#d9e1eb)}.article-visual>span{position:absolute;left:18px;bottom:15px;z-index:1;font-size:9px;letter-spacing:.14em}.article-body{margin:14px 0 7px}.article-body .eyebrow{font-size:10px;color:#d9e6ef;margin-bottom:7px}.article-body h3{margin:0;font-size:21px;line-height:1.42;letter-spacing:-.05em;color:var(--ink)}.article-body h3 em{font-style:normal;color:var(--orange)}.article-card>p{font-size:9px;color:#788295;margin:10px 0 6px}.article-card>p strong{color:var(--orange)}.article-desc{font-size:12px;line-height:1.7;color:#526078}.site-footer{background:var(--ink);color:white;border-radius:23px;padding:38px 42px 25px;margin-bottom:22px}.footer-top{display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,.13);padding-bottom:26px}.footer-top nav{display:flex;gap:28px;color:#c4c8d5;font-size:10px}.footer-top nav strong{color:#fff}.footer-content{display:flex;justify-content:space-between;gap:30px;padding:25px 0 22px;color:#aeb5c8;font-size:10px;line-height:1.8}.footer-content p{margin:0}.footer-contact{display:grid;justify-items:end;align-content:start;line-height:1.5}.footer-contact>span{font-size:9px}.footer-contact>strong{font-size:27px;color:#fff;letter-spacing:-.03em}.footer-contact>p{font-size:9px;margin:2px 0 7px}.socials{display:flex;gap:7px}.socials a{width:24px;height:24px;display:grid;place-items:center;border-radius:7px;background:#e8edf7;color:#192342;font-size:9px;font-weight:800}.socials a:nth-child(2){background:#24a366;color:#fff}.socials a:nth-child(3){background:#f13d3d;color:#fff}.socials a:nth-child(4){background:#f8df00;color:#222}.footer-bottom{display:flex;justify-content:space-between;color:#8089a1;font-size:9px;margin-top:20px}
+
+@media(max-width:1000px){.shell,.announcement{width:calc(100% - 40px)}.hero-grid{grid-template-columns:1fr 1fr;gap:12px}.hero-card{height:520px;min-height:480px}.hero-side{min-height:520px;gap:12px}.product-tile{padding:17px 15px}.product-tile h2{font-size:14px}.product-tile p{font-size:9px}.clock-card{padding:17px}.quick-grid{gap:12px;grid-template-columns:.95fr 2fr .95fr}.deal-card,.review-card,.consult-card{height:195px}.deal-card{padding:16px}.review-card{padding:14px}.review-list li{grid-template-columns:53px 43px 1fr;gap:6px;padding:6px 0}.review-list small{display:none}.article-visual{height:210px}.article-body h3{font-size:18px}.footer-top nav{gap:14px}}
+@media(max-width:700px){body{font-size:13px}.shell,.announcement{width:calc(100% - 28px)}.announcement{margin-top:10px;height:37px;padding:0 33px 0 12px;gap:7px;border-radius:9px;font-size:8px}.announcement>span{gap:8px;overflow:hidden;white-space:nowrap}.announcement strong{font-size:9px;white-space:nowrap}.announcement>a{font-size:8px;padding:4px 7px;white-space:nowrap}.announcement-close{right:7px}.site-header{height:67px;position:relative}.wordmark{font-size:23px}.menu-toggle{display:grid;gap:5px;border:0;background:none;padding:8px;order:3}.menu-toggle i{display:block;width:21px;height:2px;background:var(--ink)}.main-nav{display:none;position:absolute;top:58px;left:0;right:0;z-index:5;background:#fff;border-radius:14px;padding:18px;box-shadow:0 12px 30px #1e23401c;gap:0;flex-direction:column;align-items:stretch}.main-nav.open{display:flex}.main-nav a{padding:12px 5px;border-bottom:1px solid var(--line)}.main-nav a:last-child{border:0}.header-actions{margin-left:auto;margin-right:12px;gap:10px;font-size:10px}.header-actions>a:first-child{display:none}.outline-button{padding:8px 11px}.hero-grid{grid-template-columns:1fr;gap:12px}.hero-card{height:440px;min-height:0;border-radius:18px}.hero-time strong{font-size:42px}.hero-copy{left:20px;bottom:24px}.hero-copy h1{font-size:29px}.hero-label{left:18px;top:18px}.hero-side{min-height:0;grid-template-rows:160px 160px 168px;gap:10px}.product-tile{border-radius:16px;padding:15px 13px}.product-tile h2{font-size:13px}.product-tile p{max-width:80%;font-size:8px}.product-tile img{height:85%;width:38%;right:2%}.new-badge{right:10px;top:10px;font-size:7px}.recommend-tile{border-radius:16px;padding:16px 14px}.recommend-tile h2{font-size:17px;margin:18px 0 10px}.recommend-tile img{right:-36%;width:125%;height:120%}.pill-link{padding:7px 10px;font-size:9px}.clock-card{border-radius:16px;padding:14px;min-height:168px}.digital-clock{gap:4px;font-size:39px}.clock-bottom{gap:12px}.date-block strong{font-size:11px}.date-block span{font-size:7px}.clock-card>p{font-size:9px}.quick-grid{grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}.deal-card,.review-card,.consult-card{height:190px;border-radius:16px}.deal-card{grid-column:1;grid-row:1;padding:14px}.deal-card h2{font-size:14px}.deal-card>img{width:52%;height:74%;right:-8%}.price{left:14px;bottom:17px}.review-card{grid-column:1/-1;grid-row:2;height:auto;min-height:190px;padding:14px}.review-list li{grid-template-columns:60px 48px 1fr auto}.review-list small{display:block;font-size:8px}.consult-card{grid-column:2;grid-row:1}.consult-copy{left:11px;bottom:12px;font-size:9px}.consult-copy strong{font-size:9px}.consult-chip{left:11px;top:11px}.journal-section{padding:54px 0 55px}.section-heading h2{font-size:24px}.filter-tabs{gap:5px;margin:18px 0 20px}.filter-tabs button{padding:9px 11px;font-size:9px}.article-grid{grid-template-columns:1fr;gap:25px}.article-visual{height:245px;border-radius:16px}.article-body h3{font-size:20px}.article-desc{font-size:11px}.site-footer{padding:25px 20px 19px;border-radius:17px;margin-bottom:14px}.footer-top{align-items:flex-start;gap:15px;padding-bottom:19px}.footer-top nav{display:grid;grid-template-columns:repeat(2,auto);gap:9px 14px;font-size:9px}.footer-content{padding:19px 0;gap:10px;flex-direction:column;font-size:9px}.footer-contact{justify-items:start}.footer-contact>strong{font-size:24px}.footer-bottom{flex-direction:column;gap:6px;font-size:8px;margin-top:13px}}
+@media(max-width:380px){.header-actions>a:nth-child(2){display:none}.hero-card{height:390px}.hero-side{grid-template-rows:150px 150px 158px}.digital-clock{font-size:32px}.date-block strong{font-size:10px}.deal-points{gap:4px}.review-list li{grid-template-columns:54px 43px 1fr;gap:5px}.review-list small{display:none}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important}}
+.article-grid.filtered{grid-template-columns:minmax(0,.66fr);justify-content:center}
+@media(max-width:700px){.article-grid.filtered{grid-template-columns:1fr}}
+
+/* 플립 시계 */
+.digital-clock .flip-group{display:flex;gap:.08em}
+.flip{position:relative;display:block;width:.74em;height:1.24em;perspective:3em;border-radius:.16em;box-shadow:0 .06em .14em rgba(30,35,64,.18)}
+.flip-half{position:absolute;left:0;right:0;height:50%;overflow:hidden;background:#272727;color:#fff;backface-visibility:hidden}
+.flip-half i{position:absolute;left:0;right:0;height:200%;display:grid;place-items:center;font-style:normal;font-variant-numeric:tabular-nums}
+.flip-top{top:0;border-radius:.16em .16em 0 0;transform-origin:50% 100%}
+.flip-top i{top:0}
+.flip-bottom{bottom:0;border-radius:0 0 .16em .16em;transform-origin:50% 0;background:#2d2d2d}
+.flip-bottom i{bottom:0}
+.flip::after{content:"";position:absolute;left:0;right:0;top:50%;height:1px;margin-top:-.5px;background:rgba(0,0,0,.6);z-index:3}
+.flip-leaf{display:none;z-index:2}
+.flip.is-flipping .flip-leaf{display:block}
+.flip.is-flipping .flip-top.flip-leaf{animation:flip-fold .26s ease-in both}
+.flip.is-flipping .flip-bottom.flip-leaf{animation:flip-unfold .26s .26s ease-out both}
+@keyframes flip-fold{from{transform:rotateX(0);filter:brightness(1)}to{transform:rotateX(-90deg);filter:brightness(.6)}}
+@keyframes flip-unfold{from{transform:rotateX(90deg);filter:brightness(1.4)}to{transform:rotateX(0);filter:brightness(1)}}
+.flip-group.seconds .flip-half{color:#ff7a2f}
+
+/* 이미지 재배치: 글자가 합쳐진 카드 이미지 */
+.sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.article-visual{height:auto;aspect-ratio:432/280;background:#1d2236}
+.article-visual:after{display:none}
+.article-card .article-visual img{object-fit:cover;object-position:center;background:none}
+.consult-card>img{filter:none;object-position:center}
+.consult-card:after{display:none}
+.recommend-tile img{inset:0;right:auto;top:0;width:100%;height:100%;object-fit:cover;object-position:right center;opacity:1;mask-image:linear-gradient(90deg,transparent 22%,#000 48%);-webkit-mask-image:linear-gradient(90deg,transparent 22%,#000 48%)}
+.deal-card>img{width:44%;height:86%;right:2%;bottom:2%;object-fit:contain;object-position:right bottom;mask-image:none;-webkit-mask-image:none}
+.socials a,.socials a:nth-child(n){background:none;padding:0;overflow:hidden;border-radius:50%}
+.socials img{width:24px;height:24px;display:block}
+.article-visual{background:transparent}
+.deal-card>img{mask-image:radial-gradient(closest-side,#000 72%,transparent);-webkit-mask-image:radial-gradient(closest-side,#000 72%,transparent)}
+
+/* 영상 속 시각: 시선을 뺏지 않게 작게 (기존의 약 1/3) */
+.hero-time strong{font-size:18px;font-weight:700;letter-spacing:-.02em;opacity:.92}
+.hero-time span{font-size:8px;margin-top:3px;opacity:.8}
+@media(max-width:700px){.hero-time strong{font-size:14px}.hero-time{right:18px;top:18px}}
+
+/* 시간대별 제품 병 85% */
+.product-tile img{transform:scale(.85);transform-origin:right bottom}
+
+/* 영상에 제품이 보일 때 / 호버: 배경색 전환 + 병이 딸깍 기울었다 제자리 */
+.product-tile{transition:transform .2s,background-color .45s ease}
+.product-tile img{transform-origin:50% 100%}
+.product-tile.morning.is-active,.product-tile.morning:hover{background:#ffe3cc}
+.product-tile.day.is-active,.product-tile.day:hover{background:#cdeedd}
+.product-tile.night.is-active,.product-tile.night:hover{background:#d5daf8}
+.product-tile.is-tilt img,.product-tile:hover img{animation:bottle-click .75s ease-out}
+@keyframes bottle-click{
+  0%{transform:scale(.85) rotate(0)}
+  14%{transform:scale(.85) rotate(-13deg)}
+  36%{transform:scale(.85) rotate(6deg)}
+  56%{transform:scale(.85) rotate(-3deg)}
+  76%{transform:scale(.85) rotate(1deg)}
+  100%{transform:scale(.85) rotate(0)}
+}
+@media(prefers-reduced-motion:reduce){.product-tile.is-tilt img,.product-tile:hover img{animation:none}}
+
+/* 제품 카드: 정가 + 할인쿠폰 버튼, 병 모서리 */
+.product-tile>div{display:flex;flex-direction:column;height:100%;max-width:58%}
+.tile-price{margin:auto 0 8px!important;font-size:11px!important;color:var(--ink)!important;letter-spacing:-.02em}
+.tile-price span{color:#8a93a6;font-size:10px;margin-right:2px}
+.tile-price b{font-size:16px;font-weight:800;letter-spacing:-.03em}
+.coupon-btn{align-self:flex-start;display:inline-flex;align-items:center;gap:4px;background:var(--ink);color:#fff;border-radius:999px;padding:6px 11px;font-size:10px;font-weight:700;letter-spacing:-.02em;white-space:nowrap;transition:background-color .2s}
+.coupon-btn:hover,.coupon-btn:focus-visible{background:var(--orange)}
+.product-tile img{width:auto;aspect-ratio:250/400;border-radius:5px}
+@media(max-width:700px){.product-tile>div{max-width:64%}.tile-price{margin-bottom:6px!important}.tile-price b{font-size:13px}.coupon-btn{padding:5px 8px;font-size:9px}}
+.product-tile>div>.eyebrow{margin-bottom:6px}
+.product-tile img{bottom:7%}
+@media(max-width:700px){.product-tile img{height:72%;right:1%}.coupon-btn{padding:5px 7px}}
+
+/* 실시간 시계 가운데 정렬 */
+.clock-bottom{justify-content:center}
+
+/* 게시판(후기·영양의 보고) 본문 15px, 보조 정보 13px */
+.review-list li{font-size:15px;padding:7px 0;grid-template-columns:76px 74px 1fr auto;gap:12px}
+.review-list p{line-height:1.4}
+.review-kind{font-size:12px;padding:3px 8px}
+.stars{font-size:12px}
+.review-list small{font-size:13px}
+.review-heading h2{font-size:16px}
+.review-heading h2 span{font-size:13px}
+.review-heading>a{font-size:13px}
+.section-heading p{font-size:15px}
+.filter-tabs button{font-size:15px}
+.article-card>p{font-size:13px}
+.article-desc{font-size:15px}
+@media(max-width:700px){.review-list li{grid-template-columns:64px 64px 1fr auto;gap:8px}.article-desc{font-size:15px}}
+@media(max-width:380px){.review-list li{grid-template-columns:58px 1fr;gap:6px}.review-list .stars{display:none}}
+
+/* =========================================================
+   타이포 위계 — Figma「HARU Design Guide · 폰트 구성」기준
+   영문·숫자 Outfit / 한글 Noto Sans KR
+   Display · Clock   Outfit 800 · 56 / 100% · -2%   시계
+   Logo              Outfit 800 · 24 / 100% · 8%    워드마크
+   H1 · Hero         Noto 700  · 34 / 130%          히어로 헤드라인
+   H2 · Section      Noto 700  · 30 / 135%          섹션 제목
+   Number · Price    Outfit 700 · 30 / 110%         전화번호·가격·날짜
+   Card headline     Noto 700  · 27 / 132%          매거진·추천 카드 제목
+   H3 · Product      Outfit 700 · 21 / 130%         제품명·카드 소제목
+   Body              Noto 400  · 15 / 165%          본문·메뉴
+   Caption           Noto 400  · 13 / 150%          보조 설명·회사 정보
+   Label · Tag       Outfit 700 · 12 / 120% · 8%    태그·배지·시간대 라벨
+   ========================================================= */
+:root{--t-display:56px;--t-logo:24px;--t-h1:34px;--t-h2:30px;--t-number:30px;--t-card:27px;--t-h3:21px;--t-body:15px;--t-caption:13px;--t-label:12px}
+body{font-size:var(--t-body);line-height:1.65}
+
+/* Label · Tag */
+.eyebrow,.product-tile .eyebrow,.product-tile>div>.eyebrow,.hero-label,.hero-time span,.new-badge,.now-badge,.deal-tag,
+.review-kind,.date-block span,.section-heading .eyebrow,.article-body .eyebrow,.article-visual>span,.consult-chip{
+  font-family:var(--font-en);font-size:var(--t-label);font-weight:700;line-height:1.2;letter-spacing:.08em}
+
+/* Caption */
+.announcement,.announcement>a,.announcement strong,.deal-points,.price del,.price small,.tile-price,.tile-price span,
+.review-heading h2 span,.review-heading>a,.stars,.review-list small,.clock-card>p,.article-card>p,.coupon-btn,
+.footer-top nav,.footer-content,.footer-contact>span,.footer-contact>p,.footer-bottom{font-size:var(--t-caption);line-height:1.5}
+.tile-price{font-size:var(--t-caption)!important}
+.deal-points span:before{font-size:.6em}
+
+/* Body */
+.main-nav,.header-actions,.outline-button,.hero-copy p,.product-tile p,.pill-link,.deal-card>p,.review-list li,
+.consult-copy,.consult-copy strong,.section-heading p,.filter-tabs button,.article-desc{font-size:var(--t-body);line-height:1.65}
+.review-list p{line-height:1.5}
+.hero-time strong{font-family:var(--font-en);font-size:var(--t-body);font-weight:700;line-height:1.2}
+
+/* H3 · Product name */
+.product-tile h2,.deal-card h2,.review-heading h2{font-family:var(--font-en);font-size:var(--t-h3);font-weight:700;line-height:1.3;letter-spacing:0}
+
+/* Card headline */
+.recommend-tile h2,.article-body h3{font-size:var(--t-card);font-weight:700;line-height:1.32;letter-spacing:0}
+
+/* Number · Price */
+.tile-price b,.price b,.price strong,.date-block strong,.footer-contact>strong{
+  font-family:var(--font-en);font-size:var(--t-number);font-weight:700;line-height:1.1;letter-spacing:0}
+.tile-price b{font-size:var(--t-h3)}
+
+/* H2 · Section / H1 · Hero */
+.section-heading h2{font-size:var(--t-h2);font-weight:700;line-height:1.35;letter-spacing:0}
+.hero-copy h1{font-size:var(--t-h1);font-weight:700;line-height:1.3;letter-spacing:0}
+
+/* Logo / Display */
+.wordmark{font-family:var(--font-en);font-size:var(--t-logo);font-weight:800;line-height:1;letter-spacing:.08em}
+.digital-clock{font-family:var(--font-en);font-size:var(--t-display);font-weight:800;line-height:1;letter-spacing:-.02em}
+
+/* 커진 글자에 맞춘 레이아웃 */
+.announcement{height:auto;min-height:48px;padding-block:10px}
+.hero-card{height:auto;min-height:720px}
+.hero-side{min-height:720px;grid-template-rows:1fr 1fr 1.05fr}
+.product-tile{padding:22px 22px 20px}
+.product-tile>div{max-width:60%}
+.product-tile h2{margin:2px 0 4px;line-height:1.2}
+.product-tile .eyebrow,.product-tile>div>.eyebrow{margin-bottom:8px}
+.tile-price{margin-bottom:10px!important}
+.coupon-btn{padding:8px 14px}
+.new-badge,.now-badge{padding:4px 10px}
+.recommend-tile h2{margin:20px 0 16px}
+.pill-link{padding:10px 16px}
+.deal-card,.review-card,.consult-card{height:auto;min-height:270px}
+.deal-card{padding:24px}
+.deal-card h2{margin:12px 0 4px}
+.review-card{padding:22px 26px}
+.review-heading{padding-bottom:12px}
+.review-list li{grid-template-columns:96px 92px 1fr auto;gap:14px;padding:9px 0}
+.review-kind{padding:4px 10px}
+.stars{letter-spacing:0}
+.consult-card>img{position:absolute;inset:0}
+.section-heading p{margin-top:6px}
+.filter-tabs button{padding:12px 22px}
+.footer-top nav{flex-wrap:wrap;gap:12px 28px}
+.footer-content{line-height:1.75}
+.socials a,.socials img{width:30px;height:30px}
+
+@media(max-width:1000px){
+  .hero-card{min-height:620px}
+  .hero-side{min-height:0;grid-template-rows:auto auto auto}
+  .product-tile{min-height:220px}
+  .review-list li{grid-template-columns:88px 1fr auto}
+  .review-list .stars{display:none}
+}
+@media(max-width:700px){
+  :root{--t-h1:28px;--t-h2:24px;--t-number:24px;--t-card:22px;--t-h3:18px}
+  .announcement>span>span{display:none}
+  .announcement{min-height:44px}
+  .header-actions>a:not(.outline-button){display:none}
+  .hero-card{height:460px;min-height:0}
+  .hero-side{grid-template-columns:1fr;grid-template-rows:none;gap:12px}
+  .product-tile,.recommend-tile{min-height:200px}
+  .product-tile>div{max-width:62%}
+  .product-tile img{height:84%;right:3%}
+  .clock-card{min-height:0;gap:18px}
+  .digital-clock{font-size:36px}
+  .clock-bottom{flex-wrap:wrap;gap:10px 16px}
+  .quick-grid{grid-template-columns:1fr}
+  .deal-card,.consult-card,.review-card{grid-column:1;grid-row:auto;min-height:240px}
+  .review-card{padding:18px}
+  .review-list li{grid-template-columns:80px 1fr;gap:10px}
+  .review-list small{display:none}
+  .footer-content{flex-direction:column}
+}
+@media(max-width:380px){
+  .digital-clock{font-size:30px}
+}
+.consult-card>img{object-position:left center}
+.recommend-tile img{left:auto;right:0;width:58%;object-position:right center;mask-image:linear-gradient(90deg,transparent 0%,#000 30%);-webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 30%)}
+.filter-tabs button{white-space:nowrap}
+@media(max-width:700px){
+  .filter-tabs{flex-wrap:wrap;justify-content:center;gap:8px}
+  .filter-tabs button{font-size:var(--t-caption);padding:10px 14px}
+  .recommend-tile img{width:52%}
+}
+
+/* =========================================================
+   헤더 내비게이션 — 주색 Midnight Ink 바탕, 쿠폰 띠보다 강조
+   ========================================================= */
+.announcement{background:#fff1e3;color:var(--ink);min-height:40px;padding-block:8px}
+.announcement>span>span{color:#5a5e70}
+.announcement strong{color:var(--orange)}
+.announcement>a{border-color:rgba(217,84,26,.45);color:var(--orange)}
+.announcement-close{color:#5a5e70}
+
+.site-header{height:62px;margin-top:12px;padding:0 10px 0 28px;border-radius:20px;background:var(--ink);color:#fff;box-shadow:0 14px 32px rgba(30,35,64,.22)}
+.site-header .wordmark{color:#fff}
+.main-nav{gap:6px;font-size:17px;font-weight:700}
+.main-nav a{color:rgba(255,255,255,.82);padding:8px 20px;border-radius:999px;transition:background-color .2s,color .2s}
+.main-nav a:hover,.main-nav a:focus-visible{color:#fff;background:rgba(255,255,255,.12)}
+.header-actions{gap:22px;font-size:var(--t-body)}
+.header-actions>a:not(.outline-button){color:rgba(255,255,255,.72)}
+.header-actions>a:not(.outline-button):hover{color:#fff}
+.site-header .outline-button{border:0;background:#ff7a2f;color:#fff;font-weight:700;line-height:1.4;padding:6px 20px;transition:background-color .2s}
+.site-header .outline-button:hover{background:var(--orange)}
+.hero-grid{margin-top:16px}
+
+@media(max-width:1000px){
+  .site-header{padding-left:22px}
+  .main-nav{font-size:var(--t-body)}
+  .main-nav a{padding:10px 12px}
+}
+@media(max-width:700px){
+  .site-header{height:56px;padding:0 8px 0 18px;border-radius:16px}
+  .menu-toggle i{background:#fff}
+  .main-nav{top:64px;font-size:17px}
+  .main-nav a{color:var(--ink);border-radius:0;padding:14px 8px}
+  .main-nav a:hover{background:none;color:var(--orange)}
+  .site-header .outline-button{padding:5px 14px}
+}
+
+/* 할인쿠폰 버튼 — 11px에 맞춘 작은 버튼 */
+.coupon-btn{font-size:11px;line-height:1.2;padding:6px 11px;gap:3px}
+@media(max-width:700px){.coupon-btn{padding:5px 9px}}
+
+/* 히어로 영상 속 시계 — 15pt(20px) */
+.hero-time strong{font-size:20px}
+
+/* 내비게이션 메뉴 가운데 정렬 — 로고·버튼 폭과 상관없이 바 정중앙 */
+@media(min-width:701px){
+  .site-header{display:grid;grid-template-columns:1fr auto 1fr;column-gap:16px}
+  .header-actions{justify-self:end}
+}
+.header-actions,.header-actions>a{white-space:nowrap}
+@media(min-width:701px) and (max-width:1000px){
+  .header-actions{gap:12px}
+  .main-nav{gap:0}
+  .main-nav a{padding:8px 10px}
+}
+
+/* 맞춤 추천 카드 — 제목 20px, 시작하기 버튼 날씬하게 */
+.recommend-tile h2{font-size:20px}
+.pill-link{line-height:1.4;padding:6px 16px}
+/* 시작하기 버튼 — 카드 아래쪽에 붙임 */
+.recommend-tile{display:flex}
+.recommend-tile>div{display:flex;flex-direction:column;flex:1}
+.recommend-tile .pill-link{margin-top:auto;align-self:flex-start}
+
+/* 맞춤 추천 제목 — "영양제 찾기" 22px, 두 줄 가운데 정렬 */
+.recommend-tile h2{width:max-content;text-align:center}
+.recommend-tile h2 .rec-strong{font-size:22px}
+
+/* 유산균 제품 이미지 확대 */
+.deal-card>img{width:54%;height:100%;right:-2%;bottom:0;mask-image:radial-gradient(closest-side,#000 80%,transparent);-webkit-mask-image:radial-gradient(closest-side,#000 80%,transparent)}
+.deal-card>h2,.deal-card>p,.deal-card>.deal-tag,.deal-points,.price{position:relative;z-index:1}
+.price{position:absolute}
+.deal-card>img{transform:translate(9px,-44px) scale(1.32);transform-origin:right center;filter:drop-shadow(0 8px 10px rgba(30,35,64,.22)) drop-shadow(0 2px 3px rgba(30,35,64,.12))}
+
+/* 아침·오후·밤 제품 이미지 — 은은한 그림자로 입체감 */
+.product-tile img{box-shadow:0 12px 22px -6px rgba(30,35,64,.28),0 3px 6px rgba(30,35,64,.12)}
+
+/* 유산균 — 배경을 지운 누끼 이미지라 가장자리 흐림·곱하기 효과 제거 */
+.deal-card>img{mask-image:none;-webkit-mask-image:none;mix-blend-mode:normal}
+
+/* 유산균 — 이미지와 맛 라벨을 한 묶음(.deal-visual)으로 키우고 옮김
+   라벨 위치(%)는 gut-balance-cutout.png(170×176) 속 각 상자의 가운데·윗면 기준 */
+.deal-visual{position:absolute;right:-2%;top:50%;width:54%;aspect-ratio:170/176;
+  transform:translate(9px,calc(-50% + 16px)) scale(1.32);transform-origin:right center;pointer-events:none}
+.deal-visual img{position:static;display:block;width:100%;height:100%;object-fit:contain;transform:none;
+  filter:drop-shadow(0 8px 10px rgba(30,35,64,.22)) drop-shadow(0 2px 3px rgba(30,35,64,.12))}
+.deal-flavors{position:absolute;inset:0;margin:0;padding:0;list-style:none}
+.deal-flavors li{position:absolute;bottom:72%;transform:translateX(-50%);white-space:nowrap;
+  font-family:var(--font-en);font-size:calc(var(--t-label) / 1.32);font-weight:700;line-height:1;
+  color:var(--ink);background:#fff;border-radius:999px;padding:.35em .7em;box-shadow:0 2px 6px rgba(30,35,64,.14)}
+.deal-flavors li:before{content:'';display:inline-block;width:.55em;height:.55em;border-radius:50%;margin-right:.35em;vertical-align:.08em}
+.deal-flavors .lemon{left:29%}.deal-flavors .lemon:before{background:#e8c937}
+.deal-flavors .orange{left:53%}.deal-flavors .orange:before{background:#f08a2c}
+.deal-flavors .apple{left:75%}.deal-flavors .apple:before{background:#8bbf3f}
+@media(max-width:700px){
+  .deal-visual{top:0;bottom:0;width:auto;transform:translate(0,-8px) scale(1.15);transform-origin:right center}
+  .deal-flavors li{font-size:calc(var(--t-label) / 1.15)}
+}
+
+/* 맛 라벨 — 더 작게 (화면 기준 10px) */
+.deal-flavors li{font-size:calc(10px / 1.32);padding:.3em .6em;box-shadow:0 1px 4px rgba(30,35,64,.12)}
+@media(max-width:700px){.deal-flavors li{font-size:calc(10px / 1.15)}}
+
+/* =========================================================
+   반응형 — 태블릿·작은 노트북(701~1280px): 히어로를 위로, 타일은 2열로
+   ========================================================= */
+@media(min-width:701px) and (max-width:1280px){
+  .hero-grid{grid-template-columns:1fr}
+  .hero-card{height:520px;min-height:0}
+  .hero-side{grid-template-columns:1fr 1fr;grid-template-rows:none;min-height:0}
+  .product-tile,.recommend-tile{min-height:230px}
+  .clock-card{grid-column:1/-1;min-height:0;gap:18px}
+  .quick-grid{grid-template-columns:1fr 1fr}
+  .deal-card{grid-column:1;grid-row:1}
+  .consult-card{grid-column:2;grid-row:1}
+  .review-card{grid-column:1/-1;grid-row:2;min-height:0}
+  .review-list li{grid-template-columns:96px 92px 1fr auto}
+  .review-list .stars,.review-list small{display:block}
+}
+
+/* 모바일 메뉴 — 햄버거로 열고, 로그인·회원가입도 메뉴 안에 */
+.nav-mobile-only{display:none}
+@media(max-width:700px){
+  .main-nav .nav-mobile-only{display:block}
+  .menu-toggle i{transition:transform .2s}
+  .menu-toggle[aria-expanded="true"] i:first-child{transform:translateY(3.5px) rotate(45deg)}
+  .menu-toggle[aria-expanded="true"] i:last-child{transform:translateY(-3.5px) rotate(-45deg)}
+  .deal-card{min-height:260px}
+}
+.announcement[hidden]{display:none}
+
+/* 1281~1439px: 유산균 카드가 좁아 이미지·라벨을 조금 작게 */
+@media(min-width:1281px) and (max-width:1439px){
+  .deal-visual{transform:translate(9px,calc(-50% + 26px)) scale(1.16)}
+  .deal-flavors li{font-size:calc(10px / 1.16)}
+}

@@ -1,0 +1,55 @@
+/* =========================================================
+   로그인 · 회원가입 — styles.css의 색·폰트 토큰과 헤더를 그대로 사용
+   ========================================================= */
+.auth-main{display:grid;place-items:center;padding:56px 0 72px}
+.auth-card{width:min(440px,100%);background:#fff;border-radius:24px;padding:44px 40px 36px;box-shadow:0 24px 60px rgba(30,35,64,.12)}
+.auth-card .eyebrow{color:var(--orange);margin-bottom:10px}
+.auth-card h1{margin:0;font-size:var(--t-h2);font-weight:700;line-height:1.35}
+.auth-lead{margin:8px 0 28px;color:#5a5e70;font-size:var(--t-body)}
+
+/* 첫 구매 쿠폰 안내 (회원가입) */
+.auth-perk{display:flex;align-items:center;gap:12px;margin:0 0 24px;padding:14px 16px;border-radius:14px;background:#fff1e3;font-size:var(--t-caption);line-height:1.5;color:var(--ink)}
+.auth-perk b{font-family:var(--font-en);font-size:var(--t-h3);color:var(--orange);line-height:1}
+
+/* 소셜 버튼 — 각 서비스의 공식 색 */
+.social-list{display:grid;gap:10px}
+.social-btn{position:relative;display:flex;align-items:center;justify-content:center;height:52px;border-radius:12px;border:0;
+  font:700 var(--t-body)/1 var(--font);cursor:pointer;transition:filter .2s,transform .2s}
+.social-btn:hover{filter:brightness(.96)}
+.social-btn:active{transform:translateY(1px)}
+.social-btn:disabled{cursor:not-allowed;opacity:.45;filter:none;transform:none}
+.social-btn svg{position:absolute;left:18px;width:20px;height:20px}
+.social-btn.kakao{background:#fee500;color:rgba(0,0,0,.85)}
+.social-btn.naver{background:#03c75a;color:#fff}
+.social-btn.google{background:#fff;color:#1f1f1f;box-shadow:inset 0 0 0 1px #dadce0}
+
+/* 약관 동의 (회원가입) */
+.terms{margin:0 0 20px;padding:0;border:0}
+.terms legend{padding:0;margin-bottom:10px;font-size:var(--t-caption);font-weight:700;color:#5a5e70}
+.terms label{display:flex;align-items:center;gap:10px;padding:8px 0;font-size:var(--t-caption);line-height:1.5;cursor:pointer}
+.terms label.all{padding:12px 14px;margin-bottom:6px;border-radius:12px;background:#f4f5f8;font-size:var(--t-body);font-weight:700}
+.terms input{width:18px;height:18px;margin:0;accent-color:var(--ink);flex:none}
+.terms em{font-style:normal;color:var(--orange);font-weight:700}
+.terms small{color:#8a8fa0}
+
+.auth-divider{display:flex;align-items:center;gap:12px;margin:24px 0 16px;color:#8a8fa0;font-size:var(--t-caption)}
+.auth-divider:before,.auth-divider:after{content:'';flex:1;height:1px;background:var(--line)}
+.auth-switch{margin:0;text-align:center;font-size:var(--t-caption);color:#5a5e70}
+.auth-switch a{margin-left:6px;color:var(--ink);font-weight:700;text-decoration:underline;text-underline-offset:3px}
+.auth-note{margin:20px 0 0;text-align:center;font-size:11px;line-height:1.6;color:#8a8fa0}
+
+/* 버튼을 눌렀을 때 뜨는 안내 */
+.auth-toast{position:fixed;left:50%;bottom:32px;transform:translate(-50%,16px);opacity:0;pointer-events:none;
+  background:var(--ink);color:#fff;border-radius:12px;padding:12px 18px;font-size:var(--t-caption);box-shadow:0 12px 30px rgba(30,35,64,.25);transition:opacity .25s,transform .25s}
+.auth-toast.show{opacity:1;transform:translate(-50%,0)}
+
+.auth-footer{padding:0 0 28px;text-align:center;font-size:11px;color:#8089a1}
+
+@media(max-width:700px){
+  .auth-main{padding:28px 0 48px}
+  .auth-card{padding:32px 22px 28px;border-radius:20px}
+}
+
+/* 내용이 짧아도 하늘 배경이 화면 끝까지 이어지게 */
+body[data-auth-mode]{min-height:100vh;display:flex;flex-direction:column}
+body[data-auth-mode] .auth-main{flex:1}
