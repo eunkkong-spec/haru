@@ -353,3 +353,6 @@ body{font-size:var(--t-body);line-height:1.65}
   .deal-visual{transform:translate(9px,calc(-50% + 26px)) scale(1.16)}
   .deal-flavors li{font-size:calc(10px / 1.16)}
 }
+
+/* 로그인 상태 — 헤더의 회원 이름 */
+.site-header a.is-user{color:#fff;font-weight:700}

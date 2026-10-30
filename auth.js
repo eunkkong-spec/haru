@@ -18,7 +18,24 @@
     toastTimer = setTimeout(() => toast.classList.remove('show'), 2600);
   }
 
-  const mode = document.body.dataset.authMode === 'signup' ? '가입' : '로그인';
+  const isSignup = document.body.dataset.authMode === 'signup';
+  const mode = isSignup ? '가입' : '로그인';
+
+  // 시연용 로그인: 키가 없는 서비스는 이 브라우저에만 로그인 상태를 저장 (nav.js가 헤더에 표시)
+  function demoLogin(provider) {
+    const user = {
+      name: `${NAMES[provider]} 회원`,
+      provider,
+      demo: true,
+      marketing: isSignup ? !!document.querySelector('[data-terms-item]:not([required])')?.checked : undefined,
+      at: new Date().toISOString(),
+    };
+    try { localStorage.setItem('haru:user', JSON.stringify(user)); } catch (e) { /* 저장이 막힌 브라우저 */ }
+    showToast(isSignup ? `${NAMES[provider]}로 가입했어요 · 첫 구매 10% 쿠폰이 발급됐어요` : `${NAMES[provider]}로 로그인했어요`);
+    document.querySelectorAll('[data-provider]').forEach((b) => { b.disabled = true; });
+    setTimeout(() => { location.href = 'index.html'; }, 1200);
+  }
+
   document.querySelectorAll('[data-provider]').forEach((btn) => {
     btn.addEventListener('click', () => {
       const provider = btn.dataset.provider;
@@ -26,7 +43,7 @@
         location.href = AUTH_URLS[provider];
         return;
       }
-      showToast(`${NAMES[provider]} ${mode}은 프로토타입이라 아직 연결되지 않았어요`);
+      demoLogin(provider);
     });
   });
 
