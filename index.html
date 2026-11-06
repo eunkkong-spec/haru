@@ -9,9 +9,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700;800&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
   <script src="nav.js" defer></script>
+  <script src="product-detail.js" defer></script>
+  <script src="dialogs.js" defer></script>
 </head>
 <body>
   <div class="announcement">
@@ -24,9 +27,9 @@
     <a class="wordmark" href="#top" aria-label="HARU 홈">HARU</a>
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="메뉴 열기"><i></i><i></i></button>
     <nav id="main-nav" class="main-nav" aria-label="주 메뉴">
-      <a href="#products">제품</a><a href="#recommend">맞춤 추천</a><a href="#routine">정기구독</a><a href="#consult">상담</a><a class="nav-mobile-only" href="login.html">로그인</a><a class="nav-mobile-only" href="signup.html">회원가입</a>
+      <a href="#products">제품</a><a href="#recommend" data-dialog-open="recommend-dialog" aria-haspopup="dialog">맞춤 추천</a><a href="#routine" data-dialog-open="subscribe-dialog" aria-haspopup="dialog">정기구독</a><a href="#consult" data-dialog-open="consult-dialog" aria-haspopup="dialog">상담</a><a class="nav-mobile-only" href="login.html">로그인</a><a class="nav-mobile-only" href="signup.html">회원가입</a>
     </nav>
-    <div class="header-actions"><a href="login.html">로그인</a><a href="signup.html">회원가입</a><a class="outline-button" href="#products">구매하기 <span>↗</span></a></div>
+    <div class="header-actions"><a href="login.html">로그인</a><a href="signup.html">회원가입</a><a class="outline-button" href="#products" data-dialog-open="shop-dialog" aria-haspopup="dialog">구매하기 <span>↗</span></a></div>
   </header>
 
   <main id="top" class="shell">
@@ -43,10 +46,107 @@
       </a>
 
       <div class="hero-side">
-        <div class="product-tile morning"><div><span class="eyebrow">MORNING 07:00</span><h2>Morning charge</h2><p>하루 멀티비타민</p><p class="tile-price"><span>정가</span> <b>30,000</b>원</p><a class="coupon-btn" href="#products">할인쿠폰 적용하기</a></div><img src="images/product/Product%20image/bottle_morning.png" alt="HARU Morning charge"></div>
-        <div class="product-tile day"><div><span class="eyebrow">DAY 15:00</span><h2>Day focus</h2><p>루테인 · 지아잔틴</p><p class="tile-price"><span>정가</span> <b>25,000</b>원</p><a class="coupon-btn" href="#products">할인쿠폰 적용하기</a></div><span class="new-badge">NOW</span><img src="images/product/Product%20image/bottle_day.png" alt="HARU Day focus"></div>
-        <div class="product-tile night"><div><span class="eyebrow">NIGHT 23:00</span><h2>Night rest</h2><p>글리신 · 테아닌</p><p class="tile-price"><span>정가</span> <b>20,000</b>원</p><a class="coupon-btn" href="#products">할인쿠폰 적용하기</a></div><img src="images/product/Product%20image/bottle_night.png" alt="HARU Night rest"></div>
-        <a class="recommend-tile" href="#recommend"><div><span class="eyebrow">맞춤 추천</span><h2>나에게 맞는<br><span class="rec-strong">영양제 찾기</span></h2><span class="pill-link">시작하기 <b>↗</b></span></div><img src="images/product/Product%20image/box%20set.png" alt="HARU 세 가지 시간대별 제품 박스"></a>
+        <div class="product-tile morning" data-detail="morning-charge" data-scene-at="3.3">
+          <button class="tile-open" type="button" aria-expanded="false" aria-controls="detail-morning-charge" aria-label="Morning charge 상세 보기"></button>
+          <div class="tile-summary"><span class="eyebrow">MORNING 07:00</span><h2>Morning charge</h2><p>하루 멀티비타민</p><p class="tile-price"><span>정가</span> <b>30,000</b>원</p><a class="coupon-btn" href="#products">할인쿠폰 적용하기</a></div><img src="images/product/Product%20image/bottle_morning.png" alt="HARU Morning charge">
+          <section class="tile-detail" id="detail-morning-charge" aria-label="Morning charge 상세" hidden>
+            <button class="detail-close" type="button" aria-label="상세 닫기">×</button>
+            <header class="detail-head">
+              <span class="eyebrow">MORNING 07:00</span>
+              <h2>Morning charge</h2>
+              <i class="detail-bar" aria-hidden="true"><b></b><b></b><b></b></i>
+              <p class="detail-sub">리포좀 멀티비타민&amp;미네랄 17 데일리</p>
+            </header>
+            <p class="detail-lead">바쁜 아침, 한 알로 하루 기초 영양을 채울 수 있도록 비타민·미네랄 <strong>필수영양소 17종</strong>을 <strong>리포좀 제형기술</strong>로 감싸 <strong>높은 흡수율</strong>로 완성했습니다.</p>
+            <div class="detail-check">
+              <h3><i class="fa-solid fa-clipboard-check" aria-hidden="true"></i>Morning charge가 다른 이유</h3>
+              <ul>
+                <li><i class="fa-solid fa-droplet" aria-hidden="true"></i>흡수율을 높이는 리포좀 제형기술 적용</li>
+                <li class="tight"><i class="fa-solid fa-glass-water" aria-hidden="true"></i>체외 배출이 쉬운 수용성 비타민(B군·C)은 부족하지 않게</li>
+                <li><i class="fa-solid fa-bottle-droplet" aria-hidden="true"></i>축적되기 쉬운 지용성 비타민(D·E·A)은 넘치지 않게</li>
+                <li><i class="fa-solid fa-gem" aria-hidden="true"></i>크롬·아연·구리·몰리브덴·망간, 놓치기 쉬운 미네랄까지 꼼꼼하게</li>
+                <li><i class="fa-solid fa-shield-heart" aria-hidden="true"></i>기초 건강을 위한 꼼꼼한 설계, 23중 기능성</li>
+              </ul>
+            </div>
+            <figure class="detail-visual">
+              <img class="detail-bottle" src="images/product/Product%20image/bottle_morning.png" alt="">
+              <img class="detail-photo" src="images/product/detail/morning_kitchen.jpg" alt="아침 식탁 위의 Morning charge">
+            </figure>
+            <footer class="detail-foot">
+              <p class="tile-price"><span>정가</span> <b>30,000</b>원</p>
+              <a class="coupon-btn" href="#products">할인쿠폰 적용하기</a>
+              <a class="detail-shop" href="#products">공식 쇼핑몰 바로 가기 <span aria-hidden="true">↗</span></a>
+            </footer>
+          </section>
+        </div>
+        <div class="product-tile day" data-detail="day-focus" data-scene-at="11">
+          <button class="tile-open" type="button" aria-expanded="false" aria-controls="detail-day-focus" aria-label="Day focus 상세 보기"></button>
+          <div class="tile-summary"><span class="eyebrow">DAY 15:00</span><h2>Day focus</h2><p>루테인 · 지아잔틴</p><p class="tile-price"><span>정가</span> <b>25,000</b>원</p><a class="coupon-btn" href="#products">할인쿠폰 적용하기</a></div><span class="new-badge">NOW</span><img src="images/product/Product%20image/bottle_day.png" alt="HARU Day focus">
+          <section class="tile-detail" id="detail-day-focus" aria-label="Day focus 상세" hidden>
+            <button class="detail-close" type="button" aria-label="상세 닫기">×</button>
+            <header class="detail-head">
+              <span class="eyebrow">DAY 15:00</span>
+              <h2>Day focus</h2>
+              <i class="detail-bar" aria-hidden="true"><b></b><b></b><b></b></i>
+              <p class="detail-sub">루테인·지아잔틴 <span>눈의 노화 케어 기능성 원료</span></p>
+            </header>
+            <p class="detail-lead">나이 먹으면 어쩔 수 없다고 생각하시는 눈의 노화와 활력, 늦기 전에 관리하실 수 있도록 <strong>루테인지아잔틴복합추출물</strong>과 직접 엄선한 비타민·미네랄 5종을 100% 꽉 채워 <strong>하루 한 캡슐</strong>로 완성했습니다.</p>
+            <div class="detail-check">
+              <h3><i class="fa-solid fa-clipboard-check" aria-hidden="true"></i>눈의 노화, 언제부터 관리해야 할까요?</h3>
+              <ol>
+                <li><i class="fa-solid fa-eye-low-vision" aria-hidden="true"></i>점점 눈이 침침하고 흐릿해져요.</li>
+                <li><i class="fa-solid fa-sun" aria-hidden="true"></i>눈부심이 심해 야외 활동이 불편해요.</li>
+                <li><i class="fa-solid fa-car-side" aria-hidden="true"></i>야간 운전이 잦아요.</li>
+                <li><i class="fa-solid fa-laptop" aria-hidden="true"></i>업무 상 컴퓨터와 스마트폰을 오래 써요.</li>
+                <li><i class="fa-solid fa-seedling" aria-hidden="true"></i>눈의 노화 관리를 시작하고 싶어요.</li>
+              </ol>
+            </div>
+            <figure class="detail-visual">
+              <img class="detail-bottle" src="images/product/Product%20image/bottle_day.png" alt="">
+              <img class="detail-photo" src="images/product/detail/day_marigold.jpg" alt="루테인 원료인 마리골드 꽃">
+            </figure>
+            <footer class="detail-foot">
+              <p class="tile-price"><span>정가</span> <b>25,000</b>원</p>
+              <a class="coupon-btn" href="#products">할인쿠폰 적용하기</a>
+              <a class="detail-shop" href="#products">공식 쇼핑몰 바로 가기 <span aria-hidden="true">↗</span></a>
+            </footer>
+          </section>
+        </div>
+        <div class="product-tile night" data-detail="night-rest" data-scene-at="20">
+          <button class="tile-open" type="button" aria-expanded="false" aria-controls="detail-night-rest" aria-label="Night rest 상세 보기"></button>
+          <div class="tile-summary"><span class="eyebrow">NIGHT 23:00</span><h2>Night rest</h2><p>글리신 · 테아닌</p><p class="tile-price"><span>정가</span> <b>20,000</b>원</p><a class="coupon-btn" href="#products">할인쿠폰 적용하기</a></div><img src="images/product/Product%20image/bottle_night.png" alt="HARU Night rest">
+          <section class="tile-detail" id="detail-night-rest" aria-label="Night rest 상세" hidden>
+            <button class="detail-close" type="button" aria-label="상세 닫기">×</button>
+            <header class="detail-head">
+              <span class="eyebrow">NIGHT 23:00</span>
+              <h2>Night rest</h2>
+              <i class="detail-bar" aria-hidden="true"><b></b><b></b><b></b></i>
+              <p class="detail-sub">흡수율 높은 리포좀 마그네슘</p>
+            </header>
+            <p class="detail-lead">견과류·두류·곡류에 풍부한 마그네슘도 곡류는 <strong>도정 과정에서 최대 96%가 손실</strong>돼, 정제·가공식품 위주의 식사라면 부족해지기 쉽습니다. 체내 흡수율을 높인 <strong>리포좀 마그네슘</strong>을 <strong>비타민 4종</strong>과 함께 담았습니다.</p>
+            <div class="detail-check">
+              <h3><i class="fa-solid fa-clipboard-check" aria-hidden="true"></i>Night rest가 다른 이유</h3>
+              <ul>
+                <li><i class="fa-solid fa-arrow-trend-up" aria-hidden="true"></i>체내 흡수율 UP 리포좀 마그네슘</li>
+                <li><i class="fa-solid fa-flask" aria-hidden="true"></i>미국 Ozabio社의 Lipoza®-Mg 원료 사용</li>
+                <li><i class="fa-solid fa-wheat-awn" aria-hidden="true"></i>도정·가공으로 놓치기 쉬운 마그네슘을 따로 보충</li>
+                <li><i class="fa-solid fa-bolt" aria-hidden="true"></i>에너지 충전 &amp; 신진대사 UP 필수영양소 5종</li>
+                <li><i class="fa-solid fa-moon" aria-hidden="true"></i>하루를 마무리하는 밤, 한 알로 간편하게</li>
+              </ul>
+              <p class="detail-source">[출처] 식품의약품안전처, 건강기능식품 기능성원료 &lt;마그네슘&gt;</p>
+            </div>
+            <figure class="detail-visual">
+              <img class="detail-bottle" src="images/product/Product%20image/bottle_night.png" alt="">
+              <img class="detail-photo" src="images/product/detail/night_bed.jpg" alt="잠자리에 드는 모습">
+            </figure>
+            <footer class="detail-foot">
+              <p class="tile-price"><span>정가</span> <b>20,000</b>원</p>
+              <a class="coupon-btn" href="#products">할인쿠폰 적용하기</a>
+              <a class="detail-shop" href="#products">공식 쇼핑몰 바로 가기 <span aria-hidden="true">↗</span></a>
+            </footer>
+          </section>
+        </div>
+        <a class="recommend-tile" href="#recommend" data-dialog-open="recommend-dialog" aria-haspopup="dialog"><div><span class="eyebrow">맞춤 추천</span><h2>나에게 맞는<br><span class="rec-strong">영양제 찾기</span></h2><span class="pill-link">시작하기 <b>↗</b></span></div><img src="images/product/Product%20image/box%20set.png" alt="HARU 세 가지 시간대별 제품 박스"></a>
         <div class="clock-card" id="routine"><div class="clock-top"><span class="eyebrow">지금 이 시간</span><span class="now-badge">NOW</span></div><div class="clock-bottom"><time class="digital-clock" aria-label="현재 시각" data-clock><span class="flip-group"><span class="flip" data-flip>1</span><span class="flip" data-flip>5</span></span><b>:</b><span class="flip-group"><span class="flip" data-flip>0</span><span class="flip" data-flip>3</span></span><b>:</b><span class="flip-group seconds"><span class="flip" data-flip>0</span><span class="flip" data-flip>0</span></span></time><div class="date-block"><strong data-date>2026.10.28</strong><span data-weekday>WEDNESDAY</span></div></div><p>실제 시간과 오늘의 루틴을 확인합니다</p></div>
       </div>
     </section>
@@ -54,7 +154,7 @@
     <section class="quick-grid" id="products" aria-label="제품과 고객 후기">
       <a class="deal-card" href="#recommend"><span class="deal-tag">이달의 할인</span><h2>HARU 유산균</h2><p>가벼운 하루의 시작</p><div class="price"><del>54,000원</del><strong>30%</strong><b>49,980<small>원</small></b></div><div class="deal-visual"><img src="images/product/Product%20image/gut-balance-cutout.png" alt="HARU 유산균 레몬·오렌지·사과 3가지 맛"><ul class="deal-flavors"><li class="lemon">레몬</li><li class="orange">오렌지</li><li class="apple">사과</li></ul></div></a>
       <div class="review-card"><div class="review-heading"><h2>고객 후기 <span>★ 4.8</span></h2><a href="#footer">더보기 +</a></div><ul class="review-list"><li><span class="review-kind">Night</span><span class="stars">★★★★★</span><p>자기 전에 챙겨 먹으니 아침이 훨씬 가벼워요</p><small>이○은&nbsp; 10.27</small></li><li><span class="review-kind green">Day</span><span class="stars">★★★★★</span><p>모니터 보는 시간이 길어서 꾸준히 먹고 있어요</p><small>박○나&nbsp; 10.25</small></li><li><span class="review-kind orange">Morning</span><span class="stars">★★★★★</span><p>알약 크기가 작아서 출근길에도 부담 없어요</p><small>김○아&nbsp; 10.22</small></li><li><span class="review-kind peach">유산균</span><span class="stars">★★★★★</span><p>리뉴얼 상품에서 아쉬운 점을 찾기 힘드네요</p><small>김○정&nbsp; 10.20</small></li></ul></div>
-      <a class="consult-card" id="consult" href="mailto:help@haru.example"><img src="images/product/%EC%83%81%EB%8B%B4/%EB%AC%B8%EC%9D%98.png" alt=""><span class="consult-chip sr-only">상담 / 문의</span><div class="consult-copy sr-only"><strong>상담 시 주의할 점을 알려드려요</strong><span>◉ 1:1 영양 상담</span><span>🟡 카카오톡 채널</span></div></a>
+      <a class="consult-card" id="consult" href="mailto:help@haru.example" data-dialog-open="consult-dialog" aria-haspopup="dialog"><img src="images/product/%EC%83%81%EB%8B%B4/%EB%AC%B8%EC%9D%98.png" alt=""><span class="consult-chip sr-only">상담 / 문의</span><div class="consult-copy sr-only"><strong>상담 시 주의할 점을 알려드려요</strong><span>◉ 1:1 영양 상담</span><span>🟡 카카오톡 채널</span></div></a>
     </section>
 
     <section class="journal-section" id="recommend">
@@ -69,5 +169,182 @@
   </main>
 
   <footer class="site-footer shell" id="footer"><div class="footer-top"><a class="wordmark" href="#top">HARU</a><nav aria-label="회사 정보"><a href="#footer">회사소개</a><a href="#footer">이용약관</a><a href="#footer"><strong>개인정보처리방침</strong></a><a href="#consult">고객센터</a><a href="#products">제휴 문의</a></nav></div><div class="footer-content"><div><p>(주)하루웰니스&nbsp; |&nbsp; 대표 김하루&nbsp; |&nbsp; 사업자등록번호 000-00-00000</p><p>통신판매업신고 제2025-서울강남-0000호&nbsp; |&nbsp; 개인정보관리 책임자 고객지원팀</p><p>주소 서울특별시 강남구 하루로 123, 하루빌딩 7층 (06000)</p><p>이메일 <a href="mailto:help@haru.example">help@haru.example</a></p></div><div class="footer-contact"><span>고객센터</span><strong>1588-0000</strong><p>평일 09:00 - 18:00 · 점심 12:00 - 13:00</p><div class="socials" aria-label="소셜 미디어"><a href="#footer" aria-label="글로벌 사이트"><img src="images/product/Image/imgi_1_lnb_sns_tw1%201.png" alt=""></a><a href="#footer" aria-label="네이버 밴드"><img src="images/product/Image/imgi_4_lnb_sns_tw3%201.png" alt=""></a><a href="#footer" aria-label="유튜브"><img src="images/product/Image/imgi_3_lnb_sns_tw%201.png" alt=""></a><a href="#footer" aria-label="카카오톡 채널"><img src="images/product/Image/imgi_2_lnb_sns_tw2%201.png" alt=""></a></div></div></div><div class="footer-bottom"><span>© 2026 HARU Wellness. All rights reserved.</span><span>본 사이트는 프로토타입으로 가상 브랜드이며, 실제 판매와 무관합니다.</span></div></footer>
+
+  <!-- 맞춤 추천 신청: '나에게 맞는 영양제 찾기'를 누르면 열림 (recommend.js) -->
+  <dialog class="rec-dialog" id="recommend-dialog" aria-labelledby="rec-title">
+    <form class="rec-form" method="dialog" novalidate>
+      <button class="rec-close" type="button" data-rec-close aria-label="닫기">×</button>
+      <header class="rec-head">
+        <span class="eyebrow">맞춤 추천</span>
+        <h2 id="rec-title">나에게 맞는 영양제 찾기</h2>
+        <p>몇 가지만 알려 주시면 전문 약사가 확인 후 개별로 안내해 드립니다.</p>
+      </header>
+
+      <div class="rec-grid">
+        <label class="rec-field"><span>이름 <em>*</em></span><input name="name" type="text" autocomplete="name" required placeholder="홍길동"></label>
+        <label class="rec-field"><span>나이 <em>*</em></span><input name="age" type="number" inputmode="numeric" min="1" max="120" required placeholder="35"></label>
+
+        <fieldset class="rec-field rec-span">
+          <legend>성별 <em>*</em></legend>
+          <div class="rec-choices">
+            <label><input type="radio" name="gender" value="female" required><span>여성</span></label>
+            <label><input type="radio" name="gender" value="male"><span>남성</span></label>
+          </div>
+        </fieldset>
+
+        <label class="rec-field"><span>키 <em>*</em></span><span class="rec-unit"><input name="height" type="number" inputmode="decimal" min="50" max="250" step="0.1" required placeholder="165"><i>cm</i></span></label>
+        <label class="rec-field"><span>몸무게 <em>*</em></span><span class="rec-unit"><input name="weight" type="number" inputmode="decimal" min="10" max="300" step="0.1" required placeholder="58"><i>kg</i></span></label>
+
+        <fieldset class="rec-field rec-span">
+          <legend>관심 있는 건강 고민 <small>(여러 개 선택)</small></legend>
+          <div class="rec-choices">
+            <label><input type="checkbox" name="concern" value="fatigue"><span>피로·활력</span></label>
+            <label><input type="checkbox" name="concern" value="eye"><span>눈 건강</span></label>
+            <label><input type="checkbox" name="concern" value="sleep"><span>수면·긴장</span></label>
+            <label><input type="checkbox" name="concern" value="gut"><span>장 건강</span></label>
+            <label><input type="checkbox" name="concern" value="immune"><span>면역</span></label>
+          </div>
+        </fieldset>
+
+        <label class="rec-field rec-span"><span>복용 중인 약·영양제</span><textarea name="medication" rows="3" placeholder="예) 혈압약(아침 1알), 오메가3 · 없으면 비워 두세요"></textarea><small>약과 함께 먹으면 안 되는 성분이 있는지 약사가 확인해 드려요.</small></label>
+
+        <label class="rec-field rec-span"><span>연락처 <em>*</em></span><input name="phone" type="tel" inputmode="tel" autocomplete="tel" required pattern="01[016789]-?\d{3,4}-?\d{4}" placeholder="010-1234-5678"></label>
+      </div>
+
+      <fieldset class="rec-terms">
+        <legend>개인정보 동의</legend>
+        <label class="rec-terms-all"><input type="checkbox" data-rec-all><span>아래 내용에 모두 동의합니다</span></label>
+        <div class="rec-term">
+          <label><input type="checkbox" name="agree-privacy" required><span><em>[필수]</em> 개인정보 수집·이용 동의</span></label>
+          <button class="rec-term-more" type="button" aria-expanded="false" aria-controls="rec-term-privacy">보기</button>
+          <dl class="rec-term-body" id="rec-term-privacy" hidden>
+            <dt>수집 항목</dt><dd>이름, 나이, 성별, 연락처</dd>
+            <dt>이용 목적</dt><dd>맞춤 상담 안내 및 연락</dd>
+            <dt>보유 기간</dt><dd>상담 완료 후 1년</dd>
+          </dl>
+        </div>
+        <div class="rec-term">
+          <label><input type="checkbox" name="agree-health" required><span><em>[필수]</em> 건강정보(민감정보) 처리 동의</span></label>
+          <button class="rec-term-more" type="button" aria-expanded="false" aria-controls="rec-term-health">보기</button>
+          <dl class="rec-term-body" id="rec-term-health" hidden>
+            <dt>수집 항목</dt><dd>키, 몸무게, 복용 중인 약·영양제, 건강 고민</dd>
+            <dt>이용 목적</dt><dd>약사의 맞춤 영양제 추천 및 복용 주의 안내</dd>
+            <dt>보유 기간</dt><dd>상담 완료 후 1년</dd>
+          </dl>
+        </div>
+        <p class="rec-terms-note">동의를 거부할 수 있으며, 거부하시면 맞춤 상담 신청이 제한됩니다.</p>
+      </fieldset>
+
+      <p class="rec-error" role="alert" hidden></p>
+      <button class="rec-submit" type="submit">상담 신청하기</button>
+    </form>
+
+    <div class="rec-done" hidden>
+      <button class="rec-close" type="button" data-rec-close aria-label="닫기">×</button>
+      <i class="fa-solid fa-user-doctor" aria-hidden="true"></i>
+      <h2 tabindex="-1">신청이 완료됐어요</h2>
+      <p>잠시 기다리시면 <strong>전문 약사</strong>가 남겨 주신 연락처로<br><strong>개별 문의 안내</strong>를 드립니다.</p>
+      <small>평일 09:00 - 18:00 순차 연락 · 시연용 화면으로 실제 신청은 접수되지 않습니다.</small>
+      <button class="rec-submit" type="button" data-rec-close>확인</button>
+    </div>
+  </dialog>
+
+  <!-- 정기구독 신청: 헤더 '정기구독'을 누르면 열림 (dialogs.js) — 할인율은 data-discount(%) -->
+  <dialog class="rec-dialog" id="subscribe-dialog" aria-labelledby="sub-title">
+    <form class="rec-form sub-form" method="dialog" novalidate>
+      <button class="rec-close" type="button" data-rec-close aria-label="닫기">×</button>
+      <header class="rec-head">
+        <span class="eyebrow">정기구독</span>
+        <h2 id="sub-title">원하는 주기로, 더 저렴하게</h2>
+        <p>제품과 배송 주기를 고르면 정기구독 할인이 바로 적용돼요. 다음 배송 전까지 언제든 해지할 수 있어요.</p>
+      </header>
+
+      <fieldset class="rec-field">
+        <legend>제품 선택 <em>*</em> <small>(여러 개 선택)</small></legend>
+        <div class="sub-products">
+          <label><input type="checkbox" name="product" value="Morning charge" data-price="30000"><img src="images/product/Product%20image/bottle_morning.png" alt=""><b>Morning charge</b><span>멀티비타민</span><strong>30,000원</strong></label>
+          <label><input type="checkbox" name="product" value="Day focus" data-price="25000"><img src="images/product/Product%20image/bottle_day.png" alt=""><b>Day focus</b><span>루테인·지아잔틴</span><strong>25,000원</strong></label>
+          <label><input type="checkbox" name="product" value="Night rest" data-price="20000"><img src="images/product/Product%20image/bottle_night.png" alt=""><b>Night rest</b><span>리포좀 마그네슘</span><strong>20,000원</strong></label>
+        </div>
+        <small>1개월분 정가 기준</small>
+      </fieldset>
+
+      <fieldset class="rec-field sub-cycle-field">
+        <legend>배송 주기 <em>*</em></legend>
+        <div class="sub-cycles">
+          <label><input type="radio" name="cycle" value="1" data-discount="10" required checked><span><b>1개월마다</b><small>1개월분씩 배송</small><em>10% 할인</em></span></label>
+          <label><input type="radio" name="cycle" value="3" data-discount="15"><span><b>3개월마다</b><small>3개월분씩 배송</small><em>15% 할인</em></span></label>
+          <label><input type="radio" name="cycle" value="5" data-discount="20"><span><b>5개월마다</b><small>5개월분씩 배송</small><em>20% 할인</em></span></label>
+        </div>
+      </fieldset>
+
+      <dl class="sub-summary" aria-live="polite">
+        <div><dt>정가</dt><dd data-sub-list>0원</dd></div>
+        <div><dt>정기구독 할인 <span data-sub-rate>10%</span></dt><dd class="minus" data-sub-off>-0원</dd></div>
+        <div class="total"><dt>회당 결제 금액</dt><dd data-sub-total>0원</dd></div>
+      </dl>
+
+      <div class="rec-grid sub-ship">
+        <label class="rec-field"><span>받는 분 <em>*</em></span><input name="name" type="text" autocomplete="name" required placeholder="홍길동"></label>
+        <label class="rec-field"><span>연락처 <em>*</em></span><input name="phone" type="tel" inputmode="tel" autocomplete="tel" required pattern="01[016789]-?\d{3,4}-?\d{4}" placeholder="010-1234-5678"></label>
+        <label class="rec-field rec-span"><span>배송지 <em>*</em></span><input name="address" type="text" autocomplete="street-address" required placeholder="서울시 강남구 하루로 123, 7층"></label>
+      </div>
+
+      <fieldset class="rec-terms">
+        <legend>개인정보 동의</legend>
+        <div class="rec-term">
+          <label><input type="checkbox" name="agree-privacy" required><span><em>[필수]</em> 개인정보 수집·이용 동의</span></label>
+          <button class="rec-term-more" type="button" aria-expanded="false" aria-controls="sub-term-privacy">보기</button>
+          <dl class="rec-term-body" id="sub-term-privacy" hidden>
+            <dt>수집 항목</dt><dd>받는 분 이름, 연락처, 배송지</dd>
+            <dt>이용 목적</dt><dd>정기구독 상품 배송 및 배송 안내</dd>
+            <dt>보유 기간</dt><dd>구독 해지 후 5년 (전자상거래법에 따른 보관)</dd>
+          </dl>
+        </div>
+        <p class="rec-terms-note">동의를 거부할 수 있으며, 거부하시면 정기구독 신청이 제한됩니다.</p>
+      </fieldset>
+
+      <p class="rec-error" role="alert" hidden></p>
+      <button class="rec-submit" type="submit">정기구독 신청하기</button>
+    </form>
+
+    <div class="rec-done" hidden>
+      <button class="rec-close" type="button" data-rec-close aria-label="닫기">×</button>
+      <i class="fa-solid fa-box-open" aria-hidden="true"></i>
+      <h2 tabindex="-1">정기구독 신청이 완료됐어요</h2>
+      <p data-sub-done></p>
+      <small>시연용 화면으로 실제 신청·결제는 이루어지지 않습니다.</small>
+      <button class="rec-submit" type="button" data-rec-close>확인</button>
+    </div>
+  </dialog>
+
+  <!-- 상담 안내: 헤더 '상담'을 누르면 열림 (dialogs.js) -->
+  <dialog class="rec-dialog consult-dialog" id="consult-dialog" aria-labelledby="consult-title">
+    <div class="rec-done consult-body">
+      <button class="rec-close" type="button" data-rec-close aria-label="닫기">×</button>
+      <i class="fa-solid fa-headset" aria-hidden="true"></i>
+      <h2 id="consult-title" tabindex="-1">무엇이든 편하게 물어보세요</h2>
+      <p>제품·복용법·정기구독 문의는 카카오톡이나 전화로 상담해 드려요.</p>
+      <div class="consult-actions">
+        <!-- 실제 채널이 생기면 href를 https://pf.kakao.com/_채널ID/chat 으로 바꾸면 됨 -->
+        <a class="consult-kakao" href="#consult" data-consult-kakao><i class="fa-solid fa-comment" aria-hidden="true"></i><span><b>카카오톡 상담</b><small>카카오톡에서 'HARU' 채널 검색</small></span></a>
+        <a class="consult-tel" href="tel:1588-0000"><i class="fa-solid fa-phone" aria-hidden="true"></i><span><b>1588-0000</b><small>전화 상담</small></span></a>
+      </div>
+      <p class="consult-hours">평일 09:00 - 18:00 · 점심 12:00 - 13:00 · 주말·공휴일 휴무</p>
+      <button class="consult-rec" type="button" data-dialog-open="recommend-dialog">약사 1:1 맞춤 상담 신청하기 <span aria-hidden="true">↗</span></button>
+    </div>
+  </dialog>
+
+  <!-- 구매하기 안내: 헤더 '구매하기'를 누르면 열림 (dialogs.js) — 쇼핑몰이 생기면 버튼 href에 주소를 넣으면 됨 -->
+  <dialog class="rec-dialog consult-dialog" id="shop-dialog" aria-labelledby="shop-title">
+    <div class="rec-done">
+      <button class="rec-close" type="button" data-rec-close aria-label="닫기">×</button>
+      <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i>
+      <h2 id="shop-title" tabindex="-1">공식 쇼핑몰로 이동합니다</h2>
+      <p>HARU 제품 구매는 공식 쇼핑몰에서 진행돼요.</p>
+      <small>시연용 화면으로 실제 쇼핑몰은 연결되어 있지 않습니다.</small>
+      <button class="rec-submit" type="button" data-rec-close>확인</button>
+    </div>
+  </dialog>
 </body>
 </html>
