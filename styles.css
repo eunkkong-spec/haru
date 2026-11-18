@@ -444,9 +444,6 @@ body{font-size:var(--t-body);line-height:1.65}
 .morning .detail-head .eyebrow,.morning .detail-lead strong,.morning .detail-check h3 i,.morning .detail-shop{color:var(--orange)}
 .morning .detail-check li i{background:#ffe3cc;color:var(--orange)}
 .morning .detail-foot{border-top-color:rgba(217,84,26,.2)}
-/* 마지막 글자만 넘어가지 않게 자간을 살짝 줄임 */
-.detail-check li.tight{letter-spacing:-.04em;word-break:keep-all}
-
 /* Night rest 상세 — 제품색(남색)으로 */
 .product-tile.night.is-open{background:#eef0fb!important;border:1.5px solid rgba(43,57,169,.3)}
 .night .detail-head .eyebrow,.night .detail-lead strong,.night .detail-check h3 i,.night .detail-shop{color:var(--night)}
